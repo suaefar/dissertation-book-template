@@ -1,0 +1,54 @@
+%%
+%% This is file `cvtest.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% currvita.dtx  (with options: `testfile')
+%% 
+%% LaTeX sample file for the currvita package
+%% 
+%% Copyright (C) 1999 Axel Reichert
+%% See the files README and COPYING.
+%% 
+%% \CharacterTable
+%%   {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
+%%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
+%%   Digits        \0\1\2\3\4\5\6\7\8\9
+%%   Exclamation   \!     Double quote  \"     Hash (number) \#
+%%   Dollar        \$     Percent       \%     Ampersand     \&
+%%   Acute accent  \'     Left paren    \(     Right paren   \)
+%%   Asterisk      \*     Plus          \+     Comma         \,
+%%   Minus         \-     Point         \.     Solidus       \/
+%%   Colon         \:     Semicolon     \;     Less than     \<
+%%   Equals        \=     Greater than  \>     Question mark \?
+%%   Commercial at \@     Left bracket  \[     Backslash     \\
+%%   Right bracket \]     Circumflex    \^     Underscore    \_
+%%   Grave accent  \`     Left brace    \{     Vertical bar  \|
+%%   Right brace   \}     Tilde         \~}
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage{currvita}
+\usepackage[lmargin=1.9cm,rmargin=8.1cm,tmargin=1.6cm,bmargin=11.8cm,headsep=.5cm,footskip=1.5cm]{geometry}
+\usepackage[babel=true]{csquotes}
+
+\newcommand*{\ac}[1]{\mbox{#1}}
+\tolerance=600
+\begin{document}
+\pagenumbering{gobble}
+\begin{cv}{Lebenslauf}
+  \begin{cvlist}{}
+  \item NAME
+  \item Geboren am DATUM~ORT
+  \end{cvlist}
+  \vspace*{.5cm}
+  \begin{cvlist}{}
+  \item[JAHR] ABSCHLUSS
+  \end{cvlist}
+  \vfill\hfill
+  \cvplace{ORT}
+  \date{DATUM}
+\end{cv}
+\end{document}
+\endinput

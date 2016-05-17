@@ -1,0 +1,97 @@
+\documentclass[twoside,fontsize=10pt,a4paper,headsepline,bibliography=totoc,fleqn]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[german, english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage[figuresright]{rotating}
+\usepackage{microtype}
+\usepackage{endnotes}
+\usepackage{rotating}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\textbf{}}
+%\SetWatermarkScale{0.25}
+
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+\urlstyle{same}
+%\usepackage[onehalfspacing]{setspace}
+\usepackage[asymmetric,lmargin=1.9cm,rmargin=8.1cm,tmargin=1.6cm,bmargin=11.8cm,headsep=.5cm,footskip=1.5cm]{geometry}
+\usepackage[format=plain,textfont=it,labelfont=bf]{caption}
+\usepackage[round]{natbib}
+\usepackage[all]{nowidow}
+\usepackage{layout}
+\setcounter{secnumdepth}{4}
+\usepackage{tocloft}
+\usepackage[hang,flushmargin]{footmisc}
+\captionsetup{belowskip=4pt,aboveskip=8pt}
+\usepackage{enumitem}
+\renewcommand{\labelitemi}{---}
+\setitemize[0]{leftmargin=*}
+\usepackage[outercaption]{sidecap}
+\usepackage[babel=true]{csquotes}
+\usepackage{sectsty}
+
+% Individual Chapter layout
+\renewcommand*{\chapterformat}{\mbox{\thechapter~}}
+
+\sectionfont{\normalfont\large\bfseries}
+\subsectionfont{\normalfont\normalsize\bfseries}
+\subsubsectionfont{\normalfont\normalsize\itshape}
+
+
+\author{AUTHOR}
+\begin{document}
+
+% Include prepared titlepage from pdf
+\includepdf[pages={1,2}]{titlepage/titlepage.pdf}
+
+% Set pagenumbering to roman numbers
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+% Include preface
+\include{preface/preface}
+
+% Include abstracts
+\include{abstract/abstract}
+\include{abstract/zusammenfassung}
+
+% Include table of contents
+\renewcommand{\cftdot}{}
+\tableofcontents
+
+% Include general introduction
+\include{introduction/introduction}
+
+% Include 1st chapter
+\include{chapter1/chapter1}
+
+% Include 2nd chapter
+\include{chapter2/chapter2}
+
+% Include general conclusion
+\include{conclusion/conclusion}
+
+% Include the bibliography
+\bibliography{literature/literature.bib}
+\bibliographystyle{plainnat}
+%\bibliographystyle{apalike2}
+\clearpage
+\pagenumbering{gobble}
+
+% Include Danksagung
+\include{private/danksagung}
+
+% Include prepared CV from pdf
+%\includepdf{cv/cv.pdf}
+
+% Include Erklärung
+%\include{private/erklaerung}
+
+\end{document}
